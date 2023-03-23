@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 const LoginForm = () => {
     return ( 
         <div className="w-[300px] md:w-[400px] flex flex-col py-10">
@@ -15,11 +17,18 @@ const LoginForm = () => {
             </div>
 
 
-            <p className="text-right text-mainColor mb-4 hover:text-mainHover duration-200 cursor-pointer">Forgot Password?</p>
+            <Link to="/forgot-password">
+                <p className="text-right text-mainColor mb-4 hover:text-mainHover duration-200 cursor-pointer">Forgot Password?</p>
+            </Link>
+            
 
             <button className="bg-mainColor hover:bg-mainHover py-4 text-white mt-2 duration-200 rounded">Login</button>
 
-            <p className="mt-4">New here? <span className="text-mainColor hover:text-mainHover duration-200 cursor-pointer font-extrabold">Join the wave.</span></p>
+            <p className="mt-4">New here? 
+                <Link to="/register">
+                    <span className="text-mainColor hover:text-mainHover duration-200 cursor-pointer font-extrabold"> Join the wave.</span>
+                </Link>
+            </p>
 
             
         </div>

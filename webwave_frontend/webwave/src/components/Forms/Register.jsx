@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 const RegisterForm = () => {
     return ( 
         <div className="w-[300px] md:w-[400px] flex flex-col py-10">
@@ -23,7 +25,11 @@ const RegisterForm = () => {
 
             <button className="bg-mainColor hover:bg-mainHover py-4 text-white mt-2 duration-200 rounded">Register</button>
 
-            <p className="mt-4">Own a wave? <span className="text-mainColor hover:text-mainHover duration-200 cursor-pointer font-extrabold">Log In.</span></p>
+            <p className="mt-4">Own a wave? 
+                <Link to="/login">            
+                    <span className="text-mainColor hover:text-mainHover duration-200 cursor-pointer font-extrabold"> Log In.</span>
+                </Link>
+            </p>
 
             
         </div>
